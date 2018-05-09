@@ -1,26 +1,20 @@
 package praktek02;
-public class Triangle {
- double alas;
- double tinggi;
 
-    public Triangle() {
-        alas=5;
-        tinggi=3;
-    }
-
-    void cetakInfo(){
-        System.out.println("==========================");
-        System.out.println("alas : alas");
-        System.out.println("tinggi : tinggi");
-        System.out.println("==========================");
-    }
+public class TriangleAksi {
+    public static void main(String[] args){
+  Triangle r1 = new Triangle();
+  r1.alas =5 ;
+  r1.tinggi =3 ;
+  
+  r1.cetakInfo();
+  System.out.println("luas triangle ="+r1.hitungluas());
+  r1.cetakluas();
+  
+  Triangle r2 = new Triangle();
+  r2.cetakInfo();
+  
+  Triangle r3 = new Triangle(50,30);
+  r3.cetakInfo();
+  }
     
-    double hitungluas(){
-        double luas;
-        luas=0.5*alas*tinggi;
-        return luas; 
-    }
-    void cetakluas(){
-        System.out.println("luasnya adalah:"+hitungluas());
-    }
 }
